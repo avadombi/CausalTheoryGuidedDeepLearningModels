@@ -221,7 +221,7 @@ class HBVModel(Layer):
         _q = _sdr + _qh + _qg
 
         if self.mode == "normal":
-            return _sp  # or _qp or sg (choose the optimal intermediate physical variable)
+            return sg  # or _qp or _sp (choose the optimal intermediate physical variable)
         elif self.mode == "analysis":
             if self.inter_vars == 'ea':
                 return _ea
